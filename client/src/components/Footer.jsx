@@ -23,7 +23,7 @@ export default function FooterCom() {
               <Footer.LinkGroup col>
            
                 <Footer.Link
-                  href='/about'
+                  href='/'
                   target='_blank'
                   rel='noopener noreferrer'
                 >
@@ -35,7 +35,7 @@ export default function FooterCom() {
               <Footer.Title title='Follow us' />
               <Footer.LinkGroup col>
                 <Footer.Link
-                  href='https://www.github.com/sahandghavidel'
+                  href='https://github.com/Soumya1432'
                   target='_blank'
                   rel='noopener noreferrer'
                 >
@@ -57,7 +57,7 @@ export default function FooterCom() {
         <div className='w-full sm:flex sm:items-center sm:justify-between'>
           <Footer.Copyright
             href='#'
-            by="Sahand's blog"
+            by="mern blog"
             year={new Date().getFullYear()}
           />
           <div className="flex gap-6 sm:mt-0 mt-4 sm:justify-center">
