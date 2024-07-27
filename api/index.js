@@ -9,7 +9,7 @@ import cookieParser from 'cookie-parser';
 import path from 'path';
 import cors from 'cors';
 
-dotenv.config();
+dotenv.config({path:'./.env'});
 mongoose.connect(process.env.MONODB)
 .then(()=>{
     console.log('Mongodb is connected');
@@ -22,8 +22,8 @@ const app=express();
 
 app.use(express.json());
 app.use(cookieParser());
-app.use(cors({ origin: ['http://localhost:5173'],
-    methods:['GET','POST','PUT','PATCH','DELETE'],
+app.use(cors({ origin: process.env.ORIGIN,
+    methods:process.env.METHOD,
      credentials:true }));
 
 app.listen(3000,()=>{
