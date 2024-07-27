@@ -1,19 +1,23 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react-swc';
+import dotenv from 'dotenv';
 
-// https://vitejs.dev/config/
+// Load environment variables from .env file
+dotenv.config();
+
 export default defineConfig({
   server: { 
-     cors:{ origin: import.meta.env.VITE_ORIGIN,
-      methods:import.meta.env.VITE_METHOD,
-       credentials:true },
+    cors: {
+      origin: process.env.VITE_ORIGIN,
+      methods: process.env.VITE_METHOD,
+      credentials: true
+    },
     proxy: {
       '/api': {
-        target: import.meta.env.VITE_API,
+        target: process.env.VITE_API,
         secure: false,
       },
     },
-    
   },
   plugins: [react()],
 });
