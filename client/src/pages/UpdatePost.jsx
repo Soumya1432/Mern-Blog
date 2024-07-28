@@ -138,7 +138,7 @@ export default function UpdatePost() {
         <div className='flex gap-4 items-center justify-between border-4 border-teal-500 border-dotted p-3'>
           <FileInput
             type='file'
-            accept='image/*'
+            accept='image/.*'
             onChange={(e) => setFile(e.target.files[0])}
           />
           <Button
