@@ -8,13 +8,12 @@ dotenv.config();
 export default defineConfig({
   server: { 
     cors: {
-      origin: process.env.VITE_ORIGIN,
-      methods: process.env.VITE_METHOD,
+      origin: import.meta.env.VITE_ORIGIN,
       credentials: true
     },
     proxy: {
       '/api': {
-        target: process.env.VITE_API,
+        target: import.meta.env.VITE_API,
         secure: false,
       },
     },
