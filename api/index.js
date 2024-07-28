@@ -34,7 +34,7 @@ app.use("/api/user",userRoutes);
 app.use('/api/auth',authRoutes);
 app.use('/api/post',postRoutes);
 app.use('/api/comment',commentRoutes);
-
+app.use('*',(req,res)=>res.send("404"));
 
 // app.use(express.static(path.join(_dirname,'/client/dist')));
 
